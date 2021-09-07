@@ -1,0 +1,105 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+    box-sizing:border-box;
+}
+
+body
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background-color:#000;
+}
+
+.content
+{
+    position: relative;
+}
+
+.content h2
+{
+    position:absolute;
+    font-size:8rem;
+    transform: translate(-50%,-50%);
+}
+
+.content h2:nth-child(1)
+{
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+    -moz-text-stroke: 2px #03a9f4;
+    -ms-text-stroke: 2px #03a9f4;
+    -o-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2)
+{
+    color: #03a9f4;
+    -webkit-text-stroke:2px #03a9f4;
+    -moz-text-stroke:2px #03a9f4;
+    -ms-text-stroke:2px #03a9f4;
+    -o-text-stroke:2px #03a9f4;
+    animation: water 3.5s ease-in-out infinite;
+}
+
+@keyframes water
+{
+    0%,100%
+    {
+        clip-path: polygon(0% 46%, 11% 46%, 26% 50%, 49% 57%, 63% 57%, 81% 55%, 100% 48%, 100% 100%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0% 60%, 13% 66%, 27% 67%, 44% 64%, 57% 55%, 76% 51%, 100% 59%, 100% 100%, 0% 100%);
+    }
+}
+
+@media only screen 
+and (max-width : 767px)
+{
+    .content h2 
+    {
+        font-size:6rem;
+    }
+}
+
+@media only screen 
+and (max-width : 611px)
+{
+    .content h2 
+    {
+        font-size:5rem;
+    }
+}
+
+@media only screen 
+and (max-width : 500px)
+{
+    .content h2 
+    {
+        font-size:4rem;
+    }
+}
+
+@media only screen 
+and (max-width : 400px)
+{
+    .content h2 
+    {
+        font-size:3.5rem;
+    }
+
+}
+
+@media only screen 
+and (max-width : 300px)
+{
+    .content h2 
+    {
+        font-size:2rem;
+    }
+}
